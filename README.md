@@ -113,9 +113,21 @@ Open an issue here or use [netapi.com/contact-us](https://netapi.com/contact-us/
 
 ## Related NetAPI data
 
-- Complete domain lists and detailed datasets for 1,500+ TLDs, DNS-provider and registrar lists, lookups — [API documentation](https://netapi.com/help/api/) and the companion repo [coderockers/netapi](https://github.com/coderockers/netapi)
-- Free compromised-domain and compromised-IP feeds — [netapi.com/compromised-urls](https://netapi.com/compromised-urls/)
-- Abuse research by TLD and registrar — [netapi.com/research](https://netapi.com/research/)
+Free datasets (CC BY 4.0):
+
+- [Compromised domains](https://netapi.com/compromised-urls/) and [compromised IP addresses](https://netapi.com/compromised-ips/) — daily threat-intelligence feeds, current and all-time lists
+- [TLD abuse report](https://netapi.com/research/tld-abuse/) and [registrar abuse report](https://netapi.com/research/registrar-abuse/) — which zones and registrars host the most compromised domains; hub at [netapi.com/research](https://netapi.com/research/)
+
+Domain lists and datasets (subscription):
+
+- [All domain lists](https://netapi.com/lists-all-domains/) — every registered domain in 1,500+ TLDs, one file per zone, plus daily new and deleted domains; [ccTLD lists](https://netapi.com/lists-cctld-domains/)
+- [All domain datasets](https://netapi.com/datasets-all-domains/) — domain lists enriched with nameservers, hosting IP and country, emails, phone numbers and Majestic rank; [ccTLD datasets](https://netapi.com/datasets-cctld-domains/)
+- Per-zone pages, e.g. [.com domains](https://netapi.com/com-domains/), [.net domains](https://netapi.com/net-domains/), [.org domains](https://netapi.com/org-domains/)
+- [Domains by DNS provider](https://netapi.com/dns-providers/) — e.g. [domains on Cloudflare](https://netapi.com/dns-cloudflare/)
+- [Domains by registrar (WHOIS)](https://netapi.com/whois-providers/) — with registration and expiration dates
+- [Domain lookup](https://netapi.com/lookup-domain/) and [IP lookup](https://netapi.com/lookup-ip/)
+
+Documentation: [API reference](https://netapi.com/help/api/), [FAQ](https://netapi.com/help/faq/), [plans](https://netapi.com/plans/), companion repo [coderockers/netapi](https://github.com/coderockers/netapi).
 
 ## License
 

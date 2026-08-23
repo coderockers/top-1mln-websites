@@ -6,7 +6,7 @@ Built as a drop-in replacement for the discontinued Alexa Top 1M list. Licensed 
 | | |
 |---|---|
 | **Download** | [`https://netapi.com/netapi_top1mln.csv`](https://netapi.com/netapi_top1mln.csv) (≈ 22 MB, plain CSV, no token or registration) |
-| **Official page** | [netapi.com/top-1-mln-websites](https://netapi.com/top-1-mln-websites/) — methodology, last-updated timestamp, translations |
+| **Official page** | [netapi.com/top-1-mln-websites/](https://netapi.com/top-1-mln-websites/) — methodology, last-updated timestamp, translations |
 | **Update cadence** | Rebuilt every day |
 | **Rows** | 1,000,000 + header |
 | **License** | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — free for any use, including commercial, **with attribution** |
@@ -109,14 +109,14 @@ Yes. CC BY 4.0 allows any use, including commercial and derived works, as long a
 Not in this repository. Keep your own dated snapshots if you need them.
 
 **Where do I report a problem with the list?**
-Open an issue here or use [netapi.com/contact-us](https://netapi.com/contact-us/).
+Open an issue here or use [netapi.com/contact-us/](https://netapi.com/contact-us/).
 
 ## Related NetAPI data
 
 Free datasets (CC BY 4.0):
 
 - [Compromised domains](https://netapi.com/compromised-urls/) and [compromised IP addresses](https://netapi.com/compromised-ips/) — daily threat-intelligence feeds, current and all-time lists
-- [TLD abuse report](https://netapi.com/research/tld-abuse/) and [registrar abuse report](https://netapi.com/research/registrar-abuse/) — which zones and registrars host the most compromised domains; hub at [netapi.com/research](https://netapi.com/research/)
+- [TLD abuse report](https://netapi.com/research/tld-abuse/) and [registrar abuse report](https://netapi.com/research/registrar-abuse/) — which zones and registrars host the most compromised domains; hub at [netapi.com/research/](https://netapi.com/research/)
 
 Domain lists and datasets (subscription):
 

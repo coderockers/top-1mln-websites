@@ -1,0 +1,61 @@
+# Publishes a dated snapshot of the NetAPI Top 1 Million list as a GitHub Release
+# every day. Runs on GitHub's servers; nothing is stored in the git history.
+# Source of truth is always https://netapi.com/netapi_top1mln.csv
+
+name: Daily snapshot
+
+on:
+  schedule:
+    - cron: "30 6 * * *"   # 06:30 UTC, after the list is rebuilt on netapi.com
+  workflow_dispatch:        # allows a manual run from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download the list
+        run: |
+          curl --fail --silent --show-error --location \
+            https://netapi.com/netapi_top1mln.csv -o netapi_top1mln.csv
+
+      - name: Validate the file
+        run: |
+          head -n 1 netapi_top1mln.csv | grep -qx 'NetAPI_Rank,Domain'
+          rows=$(tail -n +2 netapi_top1mln.csv | grep -c .)
+          echo "rows=$rows"
+          test "$rows" -eq 1000000
+          tail -n +2 netapi_top1mln.csv | cut -d, -f2 | sort | uniq -d | head -n 1 | grep -q . && { echo "duplicate domains"; exit 1; } || true
+
+      - name: Prepare release assets
+        id: prep
+        run: |
+          date=$(date -u +%Y-%m-%d)
+          echo "date=$date" >> "$GITHUB_OUTPUT"
+          cp netapi_top1mln.csv "netapi_top1mln_$date.csv"
+          gzip -9 -k "netapi_top1mln_$date.csv"
+          sha256sum "netapi_top1mln_$date.csv" "netapi_top1mln_$date.csv.gz" > "SHA256SUMS_$date.txt"
+          {
+            echo "NetAPI Top 1 Million Websites — snapshot of $date (UTC)."
+            echo
+            echo "- Source: https://netapi.com/netapi_top1mln.csv (rebuilt daily)"
+            echo "- Methodology and attribution: https://netapi.com/top-1-mln-websites/"
+            echo "- License: CC BY 4.0 — credit NetAPI with a link to the page above"
+            echo
+            echo "Top 10:"
+            echo '```'
+            head -n 11 netapi_top1mln.csv | tail -n +2
+            echo '```'
+          } > notes.md
+
+      - name: Publish the release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.prep.outputs.date }}
+          name: Top 1M snapshot ${{ steps.prep.outputs.date }}
+          body_path: notes.md
+          files: |
+            netapi_top1mln_${{ steps.prep.outputs.date }}.csv.gz
+            SHA256SUMS_${{ steps.prep.outputs.date }}.txt

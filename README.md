@@ -7,12 +7,12 @@ Built as a drop-in replacement for the discontinued Alexa Top 1M list. Licensed 
 |---|---|
 | **Download** | [`https://netapi.com/netapi_top1mln.csv`](https://netapi.com/netapi_top1mln.csv) (≈ 22 MB, plain CSV, no token or registration) |
 | **Official page** | [netapi.com/top-1-mln-websites/](https://netapi.com/top-1-mln-websites/) — methodology, last-updated timestamp, translations |
-| **Update cadence** | Rebuilt every day |
+| **Update cadence** | Rebuilt every day; dated snapshots in [Releases](https://github.com/coderockers/top-1mln-websites/releases) |
 | **Rows** | 1,000,000 + header |
 | **License** | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — free for any use, including commercial, **with attribution** |
 | **Publisher** | [NetAPI](https://netapi.com/) |
 
-This repository holds the documentation and ready-to-run download/parse examples (cURL, Python, Node.js, Go, PHP). The list itself is **not** stored here — it changes daily, so always fetch it from the permanent URL above.
+This repository holds the documentation, ready-to-run download/parse examples (cURL, Python, Node.js, Go, PHP) and daily dated snapshots of the list as GitHub Releases. The current list is always served from the permanent URL above; it is not stored in the git tree.
 
 ---
 
@@ -106,7 +106,7 @@ No. Every entry is a registrable domain (`example.co.uk`, `google.com`); `www.`,
 Yes. CC BY 4.0 allows any use, including commercial and derived works, as long as NetAPI is credited with a link.
 
 **Is there a historical archive?**
-Not in this repository. Keep your own dated snapshots if you need them.
+Yes. A GitHub Action publishes a dated snapshot of the list every day under [Releases](https://github.com/coderockers/top-1mln-websites/releases) (gzip-compressed CSV + SHA-256 checksums), so you can reference or download the exact list from a given day. The live file at `https://netapi.com/netapi_top1mln.csv` always remains the source of truth.
 
 **Where do I report a problem with the list?**
 Open an issue here or use [netapi.com/contact-us/](https://netapi.com/contact-us/).

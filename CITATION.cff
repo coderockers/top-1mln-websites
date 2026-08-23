@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use the NetAPI Top 1 Million Websites list, please cite it as below and link to https://netapi.com/top-1-mln-websites/ (CC BY 4.0 requires attribution)."
+type: dataset
+title: "NetAPI Top 1 Million Websites"
+abstract: "A free, daily-updated CSV ranking of the one million most popular domains on the Internet, built as a replacement for the discontinued Alexa Top 1M list."
+authors:
+  - name: "NetAPI (CodeRockers LTD)"
+    website: "https://netapi.com/"
+url: "https://netapi.com/top-1-mln-websites/"
+repository-code: "https://github.com/coderockers/top-1mln-websites"
+license: CC-BY-4.0
+keywords:
+  - top 1 million
+  - domain ranking
+  - popular websites
+  - alexa top 1m
+  - dataset

@@ -134,3 +134,7 @@ Documentation: [API reference](https://netapi.com/help/api/), [FAQ](https://neta
 The **NetAPI Top 1 Million Websites** list is © NetAPI / CodeRockers LTD and published under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) license. You may copy, redistribute, adapt and build upon it for any purpose, including commercially, provided you give appropriate credit to NetAPI with a link to `https://netapi.com/top-1-mln-websites/` and indicate if changes were made. See [LICENSE](LICENSE).
 
 The example code in this repository is released under the MIT License (see [LICENSE](LICENSE)).
+
+## Mirror
+
+A read-only copy of this repository is on GitLab: https://gitlab.com/netapi-com/top-1mln-websites (code and tags synced on every push and daily). The daily snapshots are published as releases here on GitHub.
